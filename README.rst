@@ -46,19 +46,7 @@ Extending
 ---------
 tcpextract is modular, so it is easy to extend.
 
-Modules are in TcpExtract.modules package. All you need to do to create your own module is to
-create a new file in that directory. Your module must contain a global variable called "matchlist"
-which is a python list or tuple containing one or more regexp needed to recognize the protocol.
-
-You will also need to create a new class with the same name of the module which is inherited from
-TcpExtract.Plugin. Your class must implements the "getFile" method which can use (and possibly modify) "self.other_stream" and
-"self.matched_stream" lists to read the next file and return it as a tuple in this format::
-
-	(Filename, # Can be None
-	file_extension, # if Filename is given this will not be used
-	file_contents)
-
-When is not possible to extract any file from the streams getFile should return None.
+If you are looking for further information about writing modules to support more protocols please read the `Wiki <https://github.com/faust/tcpextract/wiki/Extending>`_
 
 Licensing
 ---------
