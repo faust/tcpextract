@@ -3,7 +3,6 @@ tcpextract
 ==========
 
 https://www.abnorm.org/projects/tcpextract/
--------------------------------------------
 
 Extract files from captured TCP sessions. Support live streams and pcap files.
 
