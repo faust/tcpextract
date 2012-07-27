@@ -18,8 +18,19 @@ Requirements
 
 Install
 -------
+Gentoo users:
+^^^^^^^^^^^^^
+You should enable the `Abnorm Overlay <https://www.abnorm.org/portage/>`_ then you can install it::
+emerge tcpextract
 
-To install last stable release or older releases `dowload <https://github.com/faust/tcpextract/downloads>`_ the tarball
+Using pip:
+^^^^^^^^^^
+::
+pip install tcpextract
+
+Manual installation and git installation:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+To manually install last stable release or older releases `dowload <https://github.com/faust/tcpextract/downloads>`_ the tarball
 and extract it::
 
 	$ tar xzvvf tcpextract-*.tar.gz
