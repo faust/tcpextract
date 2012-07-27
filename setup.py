@@ -4,7 +4,7 @@ with open('README.rst') as file:
     long_description = file.read()
 
 setup(name='tcpextract',
-      version='1.0',
+      version='1.1',
       description='Extract files from captured TCP sessions. Support live streams and pcap files.',
       author='Faust',
       author_email='faust@abnorm.org',
