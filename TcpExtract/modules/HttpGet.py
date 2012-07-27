@@ -49,5 +49,5 @@ class HttpGet(Plugin):
 		self.matched_stream=self.matched_stream[1:]
 		tmp=list(self.readServerOutput(self.other_stream[0]))
 		tmp[0]=filename
-		self.files.append(tuple(tmp))
 		self.other_stream=self.other_stream[1:]
+		return tuple(tmp)

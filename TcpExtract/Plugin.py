@@ -29,6 +29,7 @@ class Plugin():
 		pass
 	
 	def getFiles(self):
-		#controllare valore di ritorno
-		while len(self.matched_stream) and len(self.other_stream):
-			self.getFile()
+		f=self.getFile()
+		while f:
+			self.files.append(f)
+			f=self.getFile()
