@@ -50,4 +50,4 @@ class HttpGet(Plugin):
 		tmp=list(self.readServerOutput(self.other_stream[0]))
 		tmp[0]=filename
 		self.files.append(tuple(tmp))
-		self.other_stream=self.other_stream[1:]	
+		self.other_stream=self.other_stream[1:]
