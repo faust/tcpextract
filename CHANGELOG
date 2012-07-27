@@ -1,0 +1,14 @@
+CHANGELOG
+----------------------
+
+[2012-07-27]
+ * new version
+ * some fix
+ * "graphical" fix in readme.rst 3
+ * "graphical" fix in readme.rst 2
+ * "graphical" fix in readme.rst
+ * fixed httpget bug
+ * new installation method
+ * Link to wikiin README
+ * Changing extending behaviour.
+ * Updating README.rst about Extending, according to the new behaviour.
