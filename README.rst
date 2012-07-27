@@ -2,7 +2,7 @@
 tcpextract
 ==========
 
-https://www.abnorm.org/projects/tcpextract/
+`https://www.abnorm.org/projects/tcpextract/ <https://www.abnorm.org/projects/tcpextract/>`_
 
 Extract files from captured TCP sessions. Support live streams and pcap files.
 
@@ -19,7 +19,7 @@ Install
 ^^^^^^^
 Gentoo users:
 -------------
-You should enable the `Abnorm Overlay <https://www.abnorm.org/portage/>`_ then you can install it::
+You should first enable the `Abnorm Overlay <https://www.abnorm.org/portage/>`_ then you can install it::
 
 	emerge tcpextract
 
