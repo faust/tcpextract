@@ -20,12 +20,14 @@ Install
 Gentoo users:
 -------------
 You should enable the `Abnorm Overlay <https://www.abnorm.org/portage/>`_ then you can install it::
-emerge tcpextract
+
+	emerge tcpextract
 
 Using pip:
 ----------
 ::
-pip install tcpextract
+
+	pip install tcpextract
 
 Manual installation and git installation:
 -----------------------------------------
