@@ -40,6 +40,8 @@ class HttpGet(Plugin):
 		return filename
 	
 	def getFile(self):
+		if len(self.other_stream)==0 or len(self.matched_stream)==0:
+			return None
 		tmp=self.other_stream[0].splitlines(True)
 		if self.other_stream[0]=='' or self.matched_stream[0]=='' or not tmp[0].endswith('200 OK\r\n'):
 			self.matched_stream=self.matched_stream[1:]
