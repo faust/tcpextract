@@ -21,11 +21,19 @@ matchlist=('^GET [^\s]+ HTTP/1\.\d{1}\r\n$',)
 class HttpGet(Plugin):
 	
 	def readServerOutput(self,data):
+		ext=''
 		lines=data.splitlines(True)
 		for l in lines[:]:
 			lines=lines[1:]
 			if l.startswith('Content-Type:'):
-				ext=l.split(':')[1].split('/')[1].strip()
+				#to deal with text encoding
+				## Content-Type: text/html; charset=utf-8
+				if ';' in l:
+					l=l.split(';')[0]
+				if '/' in l:
+					ext=l.split(':')[0].split('/')[1].strip()
+				else:
+					ext=l.split(':')[1].strip()
 			elif l=='\r\n':
 				break
 		return (None,ext,''.join(lines))
