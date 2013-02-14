@@ -14,7 +14,8 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-import threading, hashlib
+import threading
+from hashlib import sha1
 from Nids import Nids
 from TcpExtract import FileExtractor,ProtocolNotSupported
 
@@ -34,15 +35,13 @@ class Parser(threading.Thread):
 				continue
 			s.getFiles()
 			for f in s.files:
-				m=hashlib.md5()
 				if len(f[0]) > 255:
-					m.update(f[2])
-					fd=open(self.directory+'/'+m.hexdigest(),'w')
+					fd=open('%s/%s.%s'%(self.directory,sha1(f[2]).hexdigest(),f[1]),'w')
 				else:
 					if f[0]:
-						fd=open(self.directory+'/'+f[0],'w')
+						fd=open('%s/%s'%(self.directory,f[0]),'w')
 					else:
-						fd=open(self.directory+'/file%02d.%s'%(i,f[1]),'w')
+						fd=open('%s/%s.%s'%(self.directory,i,f[1]),'w')
 				i+=1
 				fd.write(f[2])
 				fd.close()
