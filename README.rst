@@ -67,3 +67,7 @@ tcpextract is released under `GPLv3 <https://www.gnu.org/licenses/gpl-3.0.html>`
 Contact
 ^^^^^^^
 You can contact the Author using `this form  <https://www.abnorm.org/contact/>`_
+
+Contributors
+^^^^^^^^^^^^
+* Kyle Creyts - http://twitter.com/hushedfeet
